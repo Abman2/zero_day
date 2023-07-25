@@ -34,12 +34,12 @@ int _printf(const char *format, ...)
                                         {
                                         while (num > 0)
                                         {
-                                        buffer[index++] = (num & 1) + '0';
-                                        num >>= 1;
+                                        buffer[index++] = num % 2;
+                                        num /= 2;
                                         }
                                         for (i = index - 1; i >= 0; i--)
                                         {
-                                        lp += putchar(buffer[i]);
+                                        lp += printf("%d", buffer[i]);
                                         }
                                         }
                                         break;
