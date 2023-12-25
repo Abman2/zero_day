@@ -11,7 +11,6 @@ function App() {
   const addUp = () => {
     let sum = Number(input)+2;
     setInput(sum)
-    console.log(sum)
   };
 
   return (
